@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: website-a-service
+spec:
+  ports:
+    - name: website-a-service
+      port: 8010
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: website-a
+  type: LoadBalancer
